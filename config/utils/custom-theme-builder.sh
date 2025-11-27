@@ -18,7 +18,14 @@ for file in app/design/frontend/*/*; do
     fi
     mkdir -p "$file/web/css/"
     npm --prefix "$file/web/tailwind" ci
-    npm --prefix "$file/web/tailwind" run build-prod
+
+    SCRIPT_NAME="build"
+    if grep -q "\"$SCRIPT_NAME\"" package.json; then
+      npm --prefix "$file/web/tailwind" run build
+    else
+      npm --prefix "$file/web/tailwind" run build-prod
+    fi
+
     # cleanup
     rm -rf "$file/web/tailwind/node_modules/"
   fi
