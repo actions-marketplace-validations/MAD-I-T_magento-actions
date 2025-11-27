@@ -2,6 +2,7 @@
 
 IS_NODE_SET=0
 
+echo "checking for hyva themes in - " $(pwd)
 for file in app/design/frontend/*/*; do
   if [ -d "$file/web/tailwind" ]
   then
