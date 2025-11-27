@@ -20,7 +20,7 @@ for file in app/design/frontend/*/*; do
     npm --prefix "$file/web/tailwind" ci
 
     SCRIPT_NAME="build"
-    if grep -q "\"$SCRIPT_NAME\"" package.json; then
+    if grep -q "\"$SCRIPT_NAME\"" $file/web/tailwind/package.json; then
       npm --prefix "$file/web/tailwind" run build
     else
       npm --prefix "$file/web/tailwind" run build-prod
