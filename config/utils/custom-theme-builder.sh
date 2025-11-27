@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 IS_NODE_SET=0
 
 echo "checking for hyva themes in - " $(pwd)
