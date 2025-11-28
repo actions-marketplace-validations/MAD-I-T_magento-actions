@@ -88,7 +88,7 @@ then
     fi
 
     ## Build static contents
-    bash /opt/config/utils/custom-theme-builder.sh
+    bash /opt/config/utils/hyva-builder.sh
 
     if [ -z "$INPUT_LANGS"  ] && [ -z "$INPUT_THEMES"  ]
     then
