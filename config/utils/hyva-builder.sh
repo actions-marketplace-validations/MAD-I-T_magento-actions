@@ -8,7 +8,7 @@ echo "checking for hyva themes in - " $(pwd)
 for file in app/design/frontend/*/*; do
   if [ -d "$file/web/tailwind" ]
   then
-    PROJECT_NODE_VERSION=$(grep -o '"node": *"[^"]*"' package.json | sed 's/.*"node": *"\([^"]*\)".*/\1/' | sed 's/[^0-9]*\([0-9]\+\).*/\1/')
+    PROJECT_NODE_VERSION=$(grep -o '"node": *"[^"]*"' $file/web/tailwind/package.json | sed 's/.*"node": *"\([^"]*\)".*/\1/' | sed 's/[^0-9]*\([0-9]\+\).*/\1/')
 
     if [ $IS_NODE_SET = 0 ]
     then
