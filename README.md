@@ -1,5 +1,5 @@
 # magento-actions
-Magento | Mage-os | PWA-Studio CI/CD using github actions: 
+Magento | Mage-os | Hyva | PWA-Studio, CI/CD using github actions: 
 
 - testing & patching
 - coding standard checks
@@ -357,6 +357,9 @@ For magento 2.4.x (**remove elasticsearch: 1 when building with 2.3.X**)
 Use **langs** argument (e.g langs: 'nl_NL,en_US') to build static content for languages other than en_US or for [multi-lang support see](https://forum.madit.fr/t/build-magento-from-github-actions-static-deploy-with-multiple-languages/25/2?u=madit). 
 
 Use **themes** argument to build static content for specific theme(s) only instead of all by default [more on multi-theme and hyva support](https://www.madit.fr/r/theme-builder-hyva).
+
+It is highly recommended to build your Hyva theme with blank and or luma as follows :
+<br/> **`themes: 'Vendor/MyHyvaTheme,Magento/luma,Magento/blank'`** as many default magento modules only support luma/blank at the time.
 
 When the github repo contains magento and pwa-studio directory, one can build only one of them (**magento-only: 1** or **pwa_studio_only: 1**) more in [complex startegies section](#complex-deploy-and-build-strategies) 
 
